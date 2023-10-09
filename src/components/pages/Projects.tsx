@@ -11,6 +11,7 @@ const Projects = () => {
       { value: '6', ref: useRef(null), controls: useAnimation() },
       { value: '7', ref: useRef(null), controls: useAnimation() },
       { value: '8', ref: useRef(null), controls: useAnimation() },
+      { value: '9', ref: useRef(null), controls: useAnimation() },
    ]
 
    projects.map((project) => {
@@ -22,20 +23,34 @@ const Projects = () => {
    })
 
    return (
-      <div className="flex min-h-screen w-full flex-col items-center justify-center bg-slate-300 px-2 py-10">
-         <p className="font-[pilowlava] text-4xl">POJECTS</p>
-         <div className="mt-5 grid w-full grid-cols-2 gap-5 px-5 lg:grid-cols-3">
+      <div className="flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-slate-300 py-20">
+         <p className="font-[pilowlava] text-6xl opacity-50">POJECTS</p>
+         <div className="mt-20 grid w-full lg:grid-cols-3">
             {projects.map((v) => (
-               <motion.div
+               <motion.a
+                  key={v.value}
                   initial={{ y: 100, opacity: 0 }}
                   animate={v.controls}
-                  transition={{ duration: 1.2 }}
-                  key={v.value}
                   ref={v.ref}
-                  className="flex h-44 items-center justify-center rounded-xl bg-slate-800 text-slate-300"
+                  href="#"
+                  className=" relative flex h-44 items-center justify-center bg-slate-800 text-slate-300"
                >
-                  <p className="text-2xl">{v.value}</p>
-               </motion.div>
+                  <p className="text-2xl">{v.value}asdasdslorem60</p>
+
+                  <motion.div
+                     initial={{ opacity: 0 }}
+                     whileHover={{ opacity: 1 }}
+                     className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-slate-500"
+                  >
+                     <div className="p-5">
+                        <p>{v.value}</p>
+                        <p>
+                           Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit. Nulla, cumque.
+                        </p>
+                     </div>
+                  </motion.div>
+               </motion.a>
             ))}
          </div>
       </div>
