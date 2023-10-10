@@ -1,34 +1,31 @@
 import { motion } from 'framer-motion'
 const Home = () => {
    return (
-      <header className="flex h-[80vh] w-full items-center justify-center overflow-hidden bg-slate-800">
-         <div className="text-center">
-            <motion.h1
-               initial={{ opacity: 0 }}
-               animate={{
-                  opacity: 1,
-                  transition: { delay: 0.2, duration: 1.4 },
-               }}
-               style={{ WebkitTextStroke: '1px white' }}
-               className="font-[pilowlava] text-7xl text-transparent selection:bg-slate-900 lg:text-8xl"
-            >
-               MINARD <br /> PARILLA
-            </motion.h1>
-
+      <div className="flex h-[80vh] w-full items-center justify-center bg-slate-800">
+         <div className="flex h-full flex-col items-center justify-between px-[5%] py-5 text-slate-600">
+            {['M', 'I', 'N', 'A', 'R', 'D'].map((v, i) => (
+               <h1 key={i} className="font-[minard-parilla] text-6xl">
+                  {v}
+               </h1>
+            ))}
+         </div>
+         <div className="flex-1 px-3 text-center text-slate-300">
             <motion.p
-               initial={{ opacity: 0, x: -50 }}
-               animate={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { delay: 0.5, duration: 1 },
-               }}
-               className="mt-3 text-[.8rem] text-slate-400 md:text-sm lg:text-lg"
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1, transition: { delay: 2.5, duration: 1 } }}
             >
-               " seamlessly connecting users to data with full-stack expertise.
-               "
+               Seamlessly connecting users to data with full-stack expertise.
             </motion.p>
          </div>
-      </header>
+
+         <div className="flex h-full flex-col items-center justify-between px-[5%] py-5 text-slate-600">
+            {['P', 'A', 'R', 'I', 'L', 'L', 'A'].map((v, i) => (
+               <h1 key={i} className="font-[minard-parilla] text-6xl">
+                  {v}
+               </h1>
+            ))}
+         </div>
+      </div>
    )
 }
 

@@ -23,13 +23,16 @@ const Projects = () => {
    })
 
    return (
-      <div className="flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-slate-300 py-20">
-         <p className="font-[pilowlava] text-6xl opacity-50">POJECTS</p>
-         <div className="mt-20 grid w-full lg:grid-cols-3">
+      <div
+         id="Projects"
+         className="flex min-h-screen w-full flex-col items-center justify-center bg-slate-300 py-20"
+      >
+         <p className="font-[minard-parilla] text-5xl opacity-50">POJECTS</p>
+         <div className="mt-10 grid w-full lg:grid-cols-3">
             {projects.map((v) => (
                <motion.a
                   key={v.value}
-                  initial={{ y: 100, opacity: 0 }}
+                  initial={{ y: 50, opacity: 0 }}
                   animate={v.controls}
                   ref={v.ref}
                   href="#"

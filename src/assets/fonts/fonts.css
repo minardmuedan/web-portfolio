@@ -1,10 +1,11 @@
 @font-face {
-   font-family: 'Blackrover';
-   src: url(BlackRoverForPersonalUse.otf);
-}
-@font-face {
-   font-family: 'Pilowlava';
+   font-family: 'minard-parilla';
    src: url(Pilowlava-Regular.otf);
+}
+
+@font-face {
+   font-family: 'Basmo';
+   src: url('Basmo-Demo.ttf');
 }
 
 /* devanagari */
